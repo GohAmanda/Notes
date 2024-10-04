@@ -13,7 +13,7 @@ const contentInput = document.getElementById('noteContent');
 const submitButton = document.getElementById('submitNote');
 const notesGrid = document.getElementById('notesGrid');
 const searchInput = document.getElementById('searchInput');
-const darkModeToggle = document.getElementById('darkModeToggle');
+const darkModeToggle = document.getElementById('darkMode');
 
 // Initialize
 function init() {
@@ -219,7 +219,7 @@ darkModeToggle.addEventListener('click', toggleDarkMode);
 
 // Handlers for edit/delete operations
 function editNoteHandler(id) {
-    
+
     // Load note into the form for editing
     editNote(id);
 }

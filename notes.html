@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Defines the character set and viewport settings for responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes/Blog Management App</title>
+
+    <!-- Page title that appears in the browser tab -->
+    <title>Notes Management App</title>
+
+    <!-- Links to the external CSS file for styling -->
     <link rel="stylesheet" href="notes.css">
+
 </head>
 <body>
-    <div class="container">
-        <h1>Notes/Blog Management App</h1>
 
-        <button id="darkModeToggle" class="btn">Toggle Dark Mode</button>
+     <!-- Main container for all the content -->
+    <div class="container">
+
+        <!-- Main heading for the app -->
+        <h1>Notes Management App</h1>
+
+        <!-- Button to toggle dark mode on and off -->
+        <button id="darkMode" class="btn">Dark Mode</button>
         
+         <!-- Form for creating a new note -->
         <div class="note-form">
+
+            <!-- Form group for the note title input -->
             <div class="form-group">
                 <label for="noteTitle">Title</label>
                 <input type="text" id="noteTitle" placeholder="Enter note title" required>
             </div>
+
+            <!-- Form group for the note content input -->
             <div class="form-group">
                 <label for="noteContent">Content</label>
                 <textarea id="noteContent" placeholder="Enter note content" required></textarea>
             </div>
+
+            <!-- Button to submit the note form and add the note -->
             <button id="submitNote" class="btn btn-primary">Add Note</button>
         </div>
 
+        <!-- Search bar for filtering the notes -->
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Search notes...">
         </div>
 
+        <!-- Grid where the list of notes will be dynamically added -->
         <div class="notes-grid" id="notesGrid"></div>
         
     </div>
 
+    <!-- JavaScript file to handle the app's functionality -->
     <script src="notes.js"></script>
 </body>
 </html>

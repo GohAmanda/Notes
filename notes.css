@@ -1,3 +1,4 @@
+/* General reset for margins, padding, and box-sizing. Sets a default font family */
 * {
     margin: 0;
     padding: 0;
@@ -5,22 +6,26 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Body styling with a background color and padding */
 body {
     background-color: #f5f5f5;
     padding: 20px;
 }
 
+/* Centers the container and sets a max width for content */
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Styling for main headings: center-aligned, dark color, and spacing below */
 h1 {
     text-align: center;
     color: #333;
     margin-bottom: 30px;
 }
 
+/* Styles for the note form: white background, padding, and a drop shadow */
 .note-form {
     background-color: white;
     padding: 20px;
@@ -29,10 +34,12 @@ h1 {
     margin-bottom: 30px;
 }
 
+/* Styles for form groups within the note form, adding space between elements */
 .form-group {
     margin-bottom: 15px;
 }
 
+/* Styling for form labels: block-level, spacing, and font styling */
 .form-group label {
     display: block;
     margin-bottom: 5px;
@@ -40,6 +47,7 @@ h1 {
     font-weight: 500;
 }
 
+/* Styling for input and textarea elements in the form */
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -49,11 +57,13 @@ h1 {
     font-size: 14px;
 }
 
+/* Specific styling for textareas: height and resize ability */
 .form-group textarea {
     height: 150px;
     resize: vertical;
 }
 
+/* General button styles: padding, border-radius, font-weight, and hover transition */
 .btn {
     padding: 8px 16px;
     border: none;
@@ -63,21 +73,25 @@ h1 {
     transition: background-color 0.3s;
 }
 
+/* Styles for primary buttons with a blue background and white text */
 .btn-primary {
     background-color: #007bff;
     color: white;
 }
 
+/* Hover effect for primary buttons: darker blue */
 .btn-primary:hover {
     background-color: #0056b3;
 }
 
+/* Grid layout for displaying notes: dynamic column count and spacing between cards */
 .notes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
+/* Styling for individual note cards: white background, padding, shadow, and rounded corners */
 .note-card {
     background-color: white;
     border-radius: 8px;
@@ -86,47 +100,56 @@ h1 {
     position: relative;
 }
 
+/* Styling for note card titles: dark color and spacing below */
 .note-card h3 {
     color: #333;
     margin-bottom: 10px;
 }
 
+/* Styling for note card content text: light gray color and font size */
 .note-card p {
     color: #666;
     font-size: 14px;
     margin-bottom: 15px;
 }
 
+/* Timestamp styling inside the note card: smaller font and light gray color */
 .note-card .timestamp {
     font-size: 12px;
     color: #888;
     margin-bottom: 10px;
 }
 
+/* Layout for the action buttons in the note card: right-aligned with space between buttons */
 .note-actions {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
 }
 
+/* Styling for the edit button: yellow background and black text */
 .btn-edit {
     background-color: #ffc107;
     color: #000;
 }
 
+/* Hover effect for the edit button: darker yellow */
 .btn-edit:hover {
     background-color: #e0a800;
 }
 
+/* Styling for the delete button: red background and white text */
 .btn-delete {
     background-color: #dc3545;
     color: white;
 }
 
+/* Hover effect for the delete button: darker red */
 .btn-delete:hover {
     background-color: #c82333;
 }
 
+/* Styles for the search bar input: full width, padding, border, and font size */
 .search-bar {
     margin-bottom: 20px;
 }
@@ -139,19 +162,19 @@ h1 {
     font-size: 14px;
 }
 
-/* Dark mode styles */
+/* Dark mode styles: darker background and white text */
 .dark-mode {
     background-color: #121212;
     color: #ffffff; /* Changes default font colors to white */
 }
 
+/* Dark mode styles for note cards: dark background and white text */
 .dark-mode .note-card {
     background-color: #1f1f1f; /* Card background color */
     color: #ffffff; /* Text color for the note card */
 }
 
-
-/* Color for all the headings in dark mode*/
+/* Dark mode styles for all heading elements */
 .dark-mode h1, 
 .dark-mode h2, 
 .dark-mode h3, 
@@ -160,19 +183,19 @@ h1 {
     color: #ffffff;  /* Color in dark mode */
 }
 
-/* Timestamp color */
+/* Timestamp color in dark mode */
 .dark-mode .timestamp {
     color: #ccc; 
 }
 
-/* Color for buttons in dark mode*/
+/* Dark mode styles for buttons: dark background, white text, and a darker border */
 .dark-mode .btn {
     background-color: #333;
     color: #ffffff; /* Button text color */
     border: 1px solid #444;
 }
 
-/* Color for input and textarea color */
+/* Dark mode styles for input and textarea elements: dark background, white text, and darker border */
 .dark-mode input,
 .dark-mode textarea {
     background-color: #333;
@@ -180,6 +203,20 @@ h1 {
     border: 1px solid #444;
 }
 
+/* Styles for the Dark Mode Button */
+#darkMode {
+    background-color: #333; 
+    color: #ffffff; 
+    border: 2px solid #444; 
+}
+
+/* Changes the background color and he border color when the button is hovered over */
+#darkMode:hover {
+    background-color: #555;
+    border-color: #666; 
+}
+
+/* Responsive design: adjusts grid layout to a single column on smaller screens */
 @media (max-width: 768px) {
     .notes-grid {
         grid-template-columns: 1fr;
